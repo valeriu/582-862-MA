@@ -32,3 +32,43 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	display: block;
 }
 /* --- --- [ General ] --- --- */
+ /****/
+ html {
+ 	height: 100%;
+ }
+body {
+	position: relative;
+	height: 100%;
+}
+.wrapper {
+	height: 100% !important; /*Pentru IE*/
+	height: 100%;
+	margin: 0 auto; 
+	overflow: hidden;
+}
+.main {
+	float: left;
+	width: 50%;
+	margin: 0 auto;
+
+}
+.clear {
+	width: auto;
+}
+article {
+	border:1px solid red;
+	width: 80%;
+	margin: 0 auto;
+}
+.index {
+	background-color: #3498db;
+}
+.feeatures {
+	background-color: #2ecc71;
+}
+.testimonials {
+	background-color: #95a5a6;
+}
+.social {
+	background-color: #9b59b6;
+}

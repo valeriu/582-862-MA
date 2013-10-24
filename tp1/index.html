@@ -2,11 +2,49 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>WPlook theme - Travail pratique 1</title>
-	<link rel="stylesheet" href="css/styles.css">
+	<title>WPlook - TP1</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Pacifico:400' rel='stylesheet' type='text/css'>
+	<link href='css/styles.css' rel='stylesheet' type='text/css'>
+	<link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="js/jquery-min.js"></script>
+	<script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".main").onepage_scroll({
+				sectionContainer: "section",
+				easing: 		  "ease-in-out"
+			});
+		});
+	</script>
 </head>
 <body>
-	
+	<div class="wrapper">
+		<div class="main">
+			<section class="index">
+				<article>
+					<h1>Logo WPLOOK</h1>
+				</article>
+			</section>
+
+			<section class="feeatures">
+				<article>
+					<h1>Features</h1>
+				</article>
+			</section>
+
+			<section class="testimonials">
+				<article>
+					<h1>Testimonials</h1>
+				</article>
+			</section>
+			<section class="social">
+				<article>
+					<h1>Social networks</h1>
+				</article>
+			</section>
+		</div>
+	</div>
 </body>
 </html>
 <!--
@@ -18,5 +56,6 @@
 	Professor : Jonathan Martel
 
 	Copyright and resources utilised:
-		* 
+		* One page scroll - https://github.com/peachananr/onepage-scroll
+		* Color Palete - https://kuler.adobe.com/create/color-wheel/
 -->
