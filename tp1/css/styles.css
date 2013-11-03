@@ -32,21 +32,45 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	display: block;
 }
 /* --- --- [ General ] --- --- */
- /****/
  html {
  	height: 100%;
  }
 body {
 	position: relative;
 	height: 100%;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	color: #fff;
+	text-align: center;
+	text-shadow: 1px 1px 1px #000;
+	/*http://css3generator.com/*/
+    filter: dropshadow(color=#000000, offx=1, offy=1);
+}
+h1 {
+	font-size: 400%;
+	margin-top: 2%;
+}
+h2 {
+	font-size: 350%;
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
+	font-size: 155%;
+	line-height: 170%;
+	font-weight: 100;
+	color: #fff;
 }
 .wrapper {
-	height: 100% !important; /*Pentru IE*/
+	height: 100% !important; /*pour IE*/
 	height: 100%;
 	margin: 0 auto; 
 	overflow: hidden;
 }
-.main {
+main {
 	float: left;
 	width: 50%;
 	margin: 0 auto;
@@ -56,12 +80,20 @@ body {
 	width: auto;
 }
 article {
-	border:1px solid red;
+	border:0px solid red; /*TODO: delete*/
 	width: 80%;
+	max-width: 1200px;
 	margin: 0 auto;
 }
 .index {
 	background-color: #3498db;
+}
+.index .caption {
+	text-align: center;
+}
+.index .caption img {
+	max-width: 100%;
+	height: auto;
 }
 .feeatures {
 	background-color: #2ecc71;

@@ -1,17 +1,27 @@
 <!doctype html>
-<html lang="en">
+<html lang="en"><!-- Main language of my site -->
 <head>
 	<meta charset="UTF-8">
 	<title>WPlook - TP1</title>
+	<!-- Brief description of your page -->
+	<meta name="description" content="The StereoClub is a premium and modern WordPress Theme ideal for NightCLubs, Music & Events, Bands, DJs, NightClubs and other music related websites.">
+	<!-- Define a viewport to mobile devices to use, setting the initial page zoom level to be 1 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Pacifico:400' rel='stylesheet' type='text/css'>
+	<!-- Include Roboto - Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto:100,400,300,700,500' rel='stylesheet' type='text/css'>
+	<!-- Include the site stylesheet -->
 	<link href='css/styles.css' rel='stylesheet' type='text/css'>
 	<link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="js/jquery-min.js"></script>
 	<script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
+	 <!-- Include the HTML5 shiv print polyfill for Internet Explorer browsers 8 and below -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 	<script>
 		$(document).ready(function(){
-			$(".main").onepage_scroll({
+			$(".stereoclub").onepage_scroll({
 				sectionContainer: "section",
 				easing: 		  "ease-in-out"
 			});
@@ -20,33 +30,74 @@
 </head>
 <body>
 	<div class="wrapper">
-		<div class="main">
+		<main class="stereoclub">
+			<!-- Use section to divide the different sections of a one-page website or portfolio -->
 			<section class="index">
 				<article>
-					<h1>Logo WPLOOK</h1>
+					<h1>StereoClub</h1>
+					<h2>NightClub & Music WordPress Theme</h2>
+					<div class="caption desktop">
+						<img title="StereoClub - Desktop version" src="images/desktop.png" alt="StereoClub - Desktop version">
+						<p class="caption-text">StereoClub - Desktop Version</p>
+					</div>
 				</article>
 			</section>
 
 			<section class="feeatures">
 				<article>
 					<h1>Features</h1>
+
+					<h2>SEO Friendly</h2>
+					<p>As well as search engine friendly code, our themes come with SEO settings to help make sure the right people are seeing your site.</p>
+
+					<h2>Built with HTML5 and CSS3</h2>
+					<p>StereoClub theme are coded by our team of professional developers who use the latest web standards to ensure clean, readable and easy-to-modify code.</p>
+
+					<h2>Responsive design</h2>
+					<p>Possibly the best feature of StereoClub is it’s device agnostic design. That means whether you’re viewing the theme on your desktop, your tablet or your smartphone, it responds and adapts delivering an optimised design for that device.</p>
+
+					<h2>Custom Homepage</h2>
+					<p>The homepage is full of options and has it’s own sidebar to place widgets in. Configure your unique introduction copy, display content from your blog & Twitter feed, enable your featured slider and portfolio modules, add widgets and display featured / recent products from your store.</p>
 				</article>
 			</section>
 
 			<section class="testimonials">
 				<article>
-					<h1>Testimonials</h1>
+					<h1>What our customers say about us</h1>
+					
+					<h2>Ionel Brogan - President, Cool Works</h2>
+					<p>I'm not a programmer, I'm just a marketing guy who blogs. WordPress makes it easy, but using the StereoClub makes it REALLY easy. If you're a serious publisher, WPlook is a no-brainer.</p>
+					
+					<h2>Daniel Budarus - DJ iNight</h2>
+					<p>Beautiful themes, great support, a super community. Optimized for speed, security and results. Seriously, what else could you ask for? StereoClub rock!</p>
 				</article>
 			</section>
+
+			<section class="demobuy">
+				<article>
+					<h1>StereoClub make your life easier</h1>
+					
+					<p>We build more than just Themes. We build User Experience for both, you and your visitors. Our Themes are great to look at, set up in minutes and easy to modify. Using them doesn’t feel like work anymore.</p>
+					http://www.kriesi.at/
+					<div class="avia-double-buttons "><a href="http://www.kriesi.at/theme-overview/" class="avia-double-button avia-double-button-1">View Themes</a><span class="button_or">or</span><a href="#what-you-get" class="avia-double-button avia-double-button-2">Learn More</a></div>
+				</article>
+			</section>
+
 			<section class="social">
 				<article>
 					<h1>Social networks</h1>
 				</article>
 			</section>
-		</div>
+
+			<section class="contact">
+				<article>
+					<h1>Contact us</h1>
+				</article>
+			</section>
+		</main>
 	</div>
 </body>
-</html>
+</html> 
 <!--
 	Travail pratique 1 : Un site web avec une grille fluide et adaptative
 	Author: Valeriu Tihai
@@ -58,4 +109,5 @@
 	Copyright and resources utilised:
 		* One page scroll - https://github.com/peachananr/onepage-scroll
 		* Color Palete - https://kuler.adobe.com/create/color-wheel/
+		* iMac, iPad, iPhone psd - http://www.pixeden.com
 -->
