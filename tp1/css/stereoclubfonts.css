@@ -1,0 +1,55 @@
+@font-face {
+	font-family: 'stereoclub';
+	src:url('fonts/stereoclub.eot');
+	src:url('fonts/stereoclub.eot?#iefix') format('embedded-opentype'),
+		url('fonts/stereoclub.ttf') format('truetype'),
+		url('fonts/stereoclub.woff') format('woff'),
+		url('fonts/stereoclub.svg#stereoclub') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class*="icon-"] {
+	font-family: 'stereoclub';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-custom:before {
+	content: "\e600";
+}
+.icon-map:before {
+	content: "\e604";
+}
+.icon-responsive:before {
+	content: "\e608";
+}
+.icon-mail:before {
+	content: "\e60a";
+}
+.icon-buy:before {
+	content: "\e607";
+}
+.icon-demo:before {
+	content: "\e606";
+}
+.icon-twitter:before {
+	content: "\e601";
+}
+.icon-facebook:before {
+	content: "\e602";
+}
+.icon-google-plus:before {
+	content: "\e603";
+}
+.icon-feed:before {
+	content: "\e605";
+}
