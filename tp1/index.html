@@ -7,18 +7,30 @@
 	<meta name="description" content="The StereoClub is a premium and modern WordPress Theme ideal for NightCLubs, Music & Events, Bands, DJs, NightClubs and other music related websites.">
 	<!-- Define a viewport to mobile devices to use, setting the initial page zoom level to be 1 -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
 	<!-- Include Roboto - Google Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Roboto:100,400,300,700,500' rel='stylesheet' type='text/css'>
 	<!-- Include the site stylesheet -->
 	<link href='css/styles.css' rel='stylesheet' type='text/css'>
 	<link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'>
+	<!-- Icons font CSS -->
+	<link href='css/stereoclubfonts.css' rel='stylesheet' type='text/css'>
+	<!-- Load jQuery minified -->
 	<script type="text/javascript" src="js/jquery-min.js"></script>
 	<script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
-	 <!-- Include the HTML5 shiv print polyfill for Internet Explorer browsers 8 and below -->
-	<!--[if lt IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+	<!-- Google Maps JS -->
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyww0kT3sGjHybCQdvUB1vIOeelhxZtao&sensor=false"></script>
+	<script type="text/javascript">
+		function initialize() {
+			var mapOptions = {
+				center: new google.maps.LatLng(45.6007189, -73.5310528),
+				zoom: 15,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+			var map = new google.maps.Map(document.getElementById("map-stereoclub"), mapOptions);
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+	<!-- One page scroll options-->
 	<script>
 		$(document).ready(function(){
 			$(".stereoclub").onepage_scroll({
@@ -27,11 +39,17 @@
 			});
 		});
 	</script>
+	 <!-- Include the HTML5 shiv print polyfill for Internet Explorer browsers 8 and below -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 </head>
 <body>
 	<div class="wrapper">
+		<!-- Star Main -->
 		<main class="stereoclub">
 			<!-- Use section to divide the different sections of a one-page website or portfolio -->
+			<!-- Index Section -->
 			<section class="index">
 				<article>
 					<h1>StereoClub</h1>
@@ -42,59 +60,127 @@
 					</div>
 				</article>
 			</section>
-
-			<section class="feeatures">
+			<!-- Features Section -->
+			<section class="features">
 				<article>
-					<h1>Features</h1>
+					<h1>Features Tour</h1>
+					<p>StereoClub theme aren't only beautiful, they are also packed full of some amazing features!</p>
+					<div class="box">
+						<div class="boximages">
+							<div class="icon-responsive"></div>
+						</div>
+						<div class="boxcontent">
+							<h2>Responsive design</h2>
+							<p>Possibly the best feature of StereoClub is it’s device agnostic design. That means whether you’re viewing the theme on your desktop, your tablet or your smartphone, it responds and adapts delivering an optimised design for that device.</p>
+						</div>
+						<div class="clear"></div>
+					</div>
 
-					<h2>SEO Friendly</h2>
-					<p>As well as search engine friendly code, our themes come with SEO settings to help make sure the right people are seeing your site.</p>
+					<div class="box">
+						<div class="boximages">
+							<div class="icon-custom"></div>
+						</div>
+						<div class="boxcontent">
+							<h2>Custom Homepage</h2>
+							<p>The homepage is full of options and has it’s own sidebar to place widgets in. Configure your unique introduction copy, display content from your blog & Twitter feed, enable your featured slider and portfolio modules, add widgets and display featured / recent products from your store.</p>
+						</div>
+						<div class="clear"></div>
+					</div>
 
-					<h2>Built with HTML5 and CSS3</h2>
-					<p>StereoClub theme are coded by our team of professional developers who use the latest web standards to ensure clean, readable and easy-to-modify code.</p>
-
-					<h2>Responsive design</h2>
-					<p>Possibly the best feature of StereoClub is it’s device agnostic design. That means whether you’re viewing the theme on your desktop, your tablet or your smartphone, it responds and adapts delivering an optimised design for that device.</p>
-
-					<h2>Custom Homepage</h2>
-					<p>The homepage is full of options and has it’s own sidebar to place widgets in. Configure your unique introduction copy, display content from your blog & Twitter feed, enable your featured slider and portfolio modules, add widgets and display featured / recent products from your store.</p>
 				</article>
 			</section>
-
+			<!-- Testimonial Section -->
 			<section class="testimonials">
 				<article>
 					<h1>What our customers say about us</h1>
-					
-					<h2>Ionel Brogan - President, Cool Works</h2>
-					<p>I'm not a programmer, I'm just a marketing guy who blogs. WordPress makes it easy, but using the StereoClub makes it REALLY easy. If you're a serious publisher, WPlook is a no-brainer.</p>
-					
-					<h2>Daniel Budarus - DJ iNight</h2>
-					<p>Beautiful themes, great support, a super community. Optimized for speed, security and results. Seriously, what else could you ask for? StereoClub rock!</p>
+					<div class="box">
+						<div class="boximages">
+							<!-- Source http://st.gdefon.com/wallpapers_original/wallpapers/435969_night-club_dj_black-man_di-dzhej_klub_nochnoj_4288x2848_(www.GdeFon.ru).jpg -->
+							<img src="images/dj-boy.jpg" alt="Ionel Brogan - Cool Works">
+						</div>
+						<div class="boxcontent">
+							<h2>Ionel Brogan - Cool Works</h2>
+							<p>I'm not a programmer, I'm just a marketing guy who blogs. WordPress makes it easy, but using the StereoClub makes it REALLY easy. If you're a serious publisher, WPlook is a no-brainer.</p>
+						</div>
+						<div class="clear"></div>
+					</div>					
+
+					<div class="box">
+						<div class="boximages">
+							<!-- Source http://onlyfreewallpaper.com/view/dj-girl-1152x864.html -->
+							<img src="images/dj-girl.jpg" alt="Daniela Budarus - DJ iNight">
+						</div>
+						<div class="boxcontent">
+							<h2>Daniela Budarus - DJ iNight</h2>
+							<p>Beautiful themes, great support, a super community. Optimized for speed, security and results. Seriously, what else could you ask for? StereoClub rock!</p>
+						</div>
+						<div class="clear"></div>
+					</div>
+
 				</article>
 			</section>
-
+			<!-- Demo and Buy Section -->
 			<section class="demobuy">
 				<article>
 					<h1>StereoClub make your life easier</h1>
 					
 					<p>We build more than just Themes. We build User Experience for both, you and your visitors. Our Themes are great to look at, set up in minutes and easy to modify. Using them doesn’t feel like work anymore.</p>
-					http://www.kriesi.at/
-					<div class="avia-double-buttons "><a href="http://www.kriesi.at/theme-overview/" class="avia-double-button avia-double-button-1">View Themes</a><span class="button_or">or</span><a href="#what-you-get" class="avia-double-button avia-double-button-2">Learn More</a></div>
+					
+					<div class="doublebuttons">
+						<a href="#demo" class="doublebutton doublebuttondemo"><i class="icon-demo"></i>View Demo</a>
+						<a href="#buy" class="doublebutton doublebuttonbuy"><i class="icon-buy"></i>55$  - Buy Now</a>
+					</div>
+
+					<p>Because we love WordPress. And because setting up your own Website should neither be painful nor expensive nor complicated. Care for every detail.</p>
 				</article>
 			</section>
-
+			<!--  Social Media Section -->
 			<section class="social">
 				<article>
-					<h1>Social networks</h1>
+					<h1>Stay Connected with Us on Social Media</h1>
+
+					<div class="fb">
+						<a href="http://fb.com/valeriu" title="Join us on Facebook"><span class="icon-facebook"></span></a>
+						<div><span>Join us on Facebook</span></div>
+					</div>
+					<div class="tw">
+						<a href="http://twitter.com/valeriu" title="Follow us on Twitter"><span class="icon-twitter"></span></a>
+						<div><span>Follow us on Twitter</span></div>
+					</div>
+					<div class="gp">
+						<a href="https://google.com/+ValeriuTihai" title="Join us on Google+"><span class="icon-google-plus"></span></a>
+						<div><span>Join us on Google+</span></div>
+					</div>
+					<div class="rss">
+						<a href="http://feeds.feedburner.com/valeriutihai" title="Subscribe by RSS"><span class="icon-feed"></span></a>
+						<div><span>Subscribe by RSS</span></div>
+					</div>
 				</article>
 			</section>
-
+			<!--  Contact and Map Section -->
 			<section class="contact">
 				<article>
 					<h1>Contact us</h1>
+					<address>
+							<ul>
+								<li>2030, boulevard Pie-IX</li>
+								<li>Bureau 430</li>
+								<li>Montréal, Québec</li>
+								<li>H1V 2C8, Canada</li>
+								<li>Tél.: 514.254.7131, poste 4800</li>
+								<li>Email: <a href="mailto:info@stereoclub.qc.ca" title="Our Email address">info@stereoclub.qc.ca</a></li>
+								<li>Site web: <a href="http://stereoclub.qc.ca" target="_blank" title="Our Website">www.stereoclub.qc.ca</a></li>
+							</ul>						
+					</address>
+					<div class="map">
+						<span class="icon-map"></span>
+					</div>
+					<div class="clear"></div>
 				</article>
+				<!-- Load google maps content-->
+				<div id="map-stereoclub"/></div>
 			</section>
-		</main>
+		</main> <!-- / End Main -->
 	</div>
 </body>
 </html> 
@@ -110,4 +196,8 @@
 		* One page scroll - https://github.com/peachananr/onepage-scroll
 		* Color Palete - https://kuler.adobe.com/create/color-wheel/
 		* iMac, iPad, iPhone psd - http://www.pixeden.com
+		* DJ Girl - http://onlyfreewallpaper.com/view/dj-girl-1152x864.html
+		* DJ Boy - http://st.gdefon.com/wallpapers_original/wallpapers/435969_night-club_dj_black-man_di-dzhej_klub_nochnoj_4288x2848_(www.GdeFon.ru).jpg
+		* Google Maps API - https://code.google.com/apis/console/
+		* IcoMoon custom icon font builder - http://icomoon.io/
 -->
