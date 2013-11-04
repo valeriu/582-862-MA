@@ -1,3 +1,7 @@
+/*
+IcoMoon is an icon solution, providing three main services: Vector Icon Packs, The IcoMoon App, and font hosting. 
+Read further to learn about each service in detail. http://icomoon.io/#about
+ */
 @font-face {
 	font-family: 'stereoclub';
 	src:url('fonts/stereoclub.eot');
@@ -29,9 +33,6 @@
 .icon-map:before {
 	content: "\e604";
 }
-.icon-responsive:before {
-	content: "\e608";
-}
 .icon-mail:before {
 	content: "\e60a";
 }
@@ -52,4 +53,10 @@
 }
 .icon-feed:before {
 	content: "\e605";
+}
+.icon-laptop:before {
+	content: "\e608";
+}
+.icon-mobile:before {
+	content: "\e609";
 }
