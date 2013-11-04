@@ -40,6 +40,11 @@ body {
 	height: 100%;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+@-moz-document url-prefix() {
+	body {
+		font-size: 70%;
+    }
+}
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 100;
@@ -51,7 +56,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
 	font-size: 400%;
-	margin-top: 2%;
+	margin-top: 1%;
 }
 h2 {
 	font-size: 350%;
@@ -84,7 +89,7 @@ main {
 article {
 	border:0px solid red; /*TODO: delete or comment*/
 	width: 80%;
-	max-width: 1200px;
+	max-width: 1024px;
 	margin: 0 auto;
 }
 /* --- --- [ Index - Frist screen ] --- --- */
@@ -111,6 +116,135 @@ article {
 /* --- --- [ Features section ] --- --- */
 .features {
 	background-color: #2ecc71;
+}
+.features .box > .boximages {
+	position: relative;
+}
+.features .icon-custom {
+	position: absolute;
+	top:0px;
+	-webkit-animation:customicon 5s ease-in-out infinite;
+	   -moz-animation:customicon 5s ease-in-out infinite;
+	    -ms-animation:customicon 5s ease-in-out infinite;
+	     -o-animation:customicon 5s ease-in-out infinite;
+			animation:customicon 5s ease-in-out infinite;
+}
+@-moz-keyframes customicon { 
+	95% { 
+		-moz-transform: rotate(360deg); 
+	} 
+	100% { 
+		-moz-transform: rotate(360deg); 
+	} 
+}
+@-webkit-keyframes customicon { 
+	95% { 
+		-webkit-transform: rotate(360deg); 
+	}
+	100% { 
+		-webkit-transform: rotate(360deg); 
+	}
+}
+@-o-keyframes customicon { 
+	95% { 
+		-o-transform: rotate(360deg); 
+	} 
+	100% { 
+		-o-transform: rotate(360deg); 
+	} 
+}
+@keyframes customicon { 
+	95% { 
+		transform:rotate(360deg); 
+	} 
+	100% { 
+		transform:rotate(360deg); 
+	} 
+}
+.features .responsive:hover > .boximages > .icon-laptop {
+	display: none;
+}
+.features .responsive > .boximages > .icon-mobile {
+	display: none;
+	-webkit-animation: featuresmobile 3s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275);
+	   -moz-animation: featuresmobile 3s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275);
+		-ms-animation: featuresmobile 3s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275);
+		 -o-animation: featuresmobile 3s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275);
+			animation: featuresmobile 3s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+@-webkit-keyframes featuresmobile {
+	0% {
+		-webkit-transform: scale(0.9);
+		opacity: 0.8
+	}
+	50% {
+		-webkit-transform: scale(1.05);
+		opacity: 0.9
+	}
+	100% {
+		-webkit-transform: scale(1);
+		opacity: 1
+	}
+}
+@-moz-keyframes featuresmobile {
+	0% {
+		-moz-transform: scale(0.9);
+		opacity: 0.8
+	}
+	50% {
+		-moz-transform: scale(1.05);
+		opacity: 0.9
+	}
+	100% {
+		-moz-transform: scale(1);
+		opacity: 1
+	}
+}
+@-ms-keyframes featuresmobile {
+	0% {
+		-ms-transform: scale(0.9);
+		opacity: 0.8
+	}
+	50% {
+		-ms-transform: scale(1.05);
+		opacity: 0.9
+	}
+	100% {
+		-ms-transform: scale(1);
+		opacity: 1
+	}
+}
+@-o-keyframes featuresmobile {
+	0% {
+		-o-transform: scale(0.9);
+		opacity: 0.8
+	}
+	50% {
+		-o-transform: scale(1.05);
+		opacity: 0.9
+	}
+	100% {
+		-o-transform: scale(1);
+		opacity: 1
+	}
+}
+@keyframes featuresmobile {
+	0% {
+		transform: scale(0.9);
+		opacity: 0.8
+	}
+	50% {
+		transform: scale(1.05);
+		opacity: 0.9
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1
+	}
+}
+.features .responsive:hover > .boximages > .icon-mobile {
+	display: block;
+
 }
 /* --- --- [ Testimonials section ] --- --- */
 .testimonials {
@@ -221,14 +355,13 @@ article {
 		opacity: 1
 	}
 }
-.box > .boximages > .front > .icon-laptop, .box > .boximages > .back > .icon-mobile, .box > .boximages > .icon-custom {
+.box > .boximages > .icon-laptop, .box > .boximages > .icon-mobile, .box > .boximages > .icon-custom {
 	font-size: 1500%;
 	margin-top: 15%;
 	color: #fff;
 	text-shadow: 0px 20px 20px #27ae60;
 }
 
-/****************** Flip3 *******************/
 
 .box:nth-child(odd) > .boximages {
 	float: right;
@@ -381,17 +514,17 @@ article {
 	text-shadow: 15px 15px 15px #d35400;
 	position: absolute;
 	-webkit-animation:mapicon 2s ease-in-out infinite;
-	   -moz-animation:mapicon 2s linear infinite;
-	    -ms-animation:mapicon 2s linear infinite;
-	     -o-animation:mapicon 2s linear infinite;
-			animation:mapicon 2s linear infinite;
+	   -moz-animation:mapicon 2s ease-in-out infinite;
+	    -ms-animation:mapicon 2s ease-in-out infinite;
+	     -o-animation:mapicon 2s ease-in-out infinite;
+			animation:mapicon 2s ease-in-out infinite;
 }
 @-moz-keyframes mapicon { 
 	50% { 
 		-moz-transform: rotate(35deg); 
 	}
 	100% { 
-		-webkit-transform: rotate(0deg); 
+		-moz-transform: rotate(0deg); 
 	} 
 }
 @-webkit-keyframes mapicon { 
@@ -435,4 +568,5 @@ article {
 } 
 .contact #map-stereoclub {
 	height: 100%;
+	z-index: 10;
 }
