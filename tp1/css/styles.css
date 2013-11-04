@@ -138,12 +138,98 @@ article {
 		 -o-box-shadow: #666 15px 15px 15px; 
 			box-shadow: #666 15px 15px 15px;
 }
-.box > .boximages > .icon-responsive, .box > .boximages > .icon-custom {
+.box:hover > .boximages img {
+	-webkit-animation: testimonialsimage 2s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275);
+	   -moz-animation: testimonialsimage 2s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275);
+		-ms-animation: testimonialsimage 2s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275);
+		 -o-animation: testimonialsimage 2s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275);
+			animation: testimonialsimage 2s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275);
+	opacity: 1;
+	-webkit-transform: scale(1);
+	   -moz-transform: scale(1);
+	  	-ms-transform: scale(1);
+		 -o-transform: scale(1);
+			transform: scale(1);
+}
+@-webkit-keyframes testimonialsimage {
+	0% {
+		-webkit-transform: scale(0.9);
+		opacity: 0.2
+	}
+	50% {
+		-webkit-transform: scale(1.1);
+		opacity: 0.8
+	}
+	100% {
+		-webkit-transform: scale(1);
+		opacity: 1
+	}
+}
+@-moz-keyframes testimonialsimage {
+	0% {
+		-moz-transform: scale(0.9);
+		opacity: 0.2
+	}
+	50% {
+		-moz-transform: scale(1.1);
+		opacity: 0.8
+	}
+	100% {
+		-moz-transform: scale(1);
+		opacity: 1
+	}
+}
+@-ms-keyframes testimonialsimage {
+	0% {
+		-ms-transform: scale(0.9);
+		opacity: 0.2
+	}
+	50% {
+		-ms-transform: scale(1.1);
+		opacity: 0.8
+	}
+	100% {
+		-ms-transform: scale(1);
+		opacity: 1
+	}
+}
+@-o-keyframes testimonialsimage {
+	0% {
+		-o-transform: scale(0.9);
+		opacity: 0.2
+	}
+	50% {
+		-o-transform: scale(1.1);
+		opacity: 0.8
+	}
+	100% {
+		-o-transform: scale(1);
+		opacity: 1
+	}
+}
+@keyframes testimonialsimage {
+	0% {
+		transform: scale(0.9);
+		opacity: 0.2
+	}
+	50% {
+		transform: scale(1.1);
+		opacity: 0.8
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1
+	}
+}
+.box > .boximages > .front > .icon-laptop, .box > .boximages > .back > .icon-mobile, .box > .boximages > .icon-custom {
 	font-size: 1500%;
 	margin-top: 15%;
 	color: #fff;
-	text-shadow: 20px 20px 20px #27ae60;
+	text-shadow: 0px 20px 20px #27ae60;
 }
+
+/****************** Flip3 *******************/
+
 .box:nth-child(odd) > .boximages {
 	float: right;
 	margin-left: 3%;
