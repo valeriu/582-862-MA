@@ -56,7 +56,9 @@ h1 {
 h2 {
 	font-size: 350%;
 }
-
+h3 {
+	font-size: 300%;
+}
 p {
 	font-family: 'Roboto', sans-serif;
 	font-size: 155%;
@@ -65,7 +67,7 @@ p {
 	color: #fff;
 }
 .wrapper {
-	height: 100% !important; /*pour IE*/
+	height: 100% !important; /* for IE*/
 	height: 100%;
 	margin: 0 auto; 
 	overflow: hidden;
@@ -80,11 +82,12 @@ main {
 	clear: both;
 }
 article {
-	border:0px solid red; /*TODO: delete*/
+	border:0px solid red; /*TODO: delete or comment*/
 	width: 80%;
 	max-width: 1200px;
 	margin: 0 auto;
 }
+/* --- --- [ Index - Frist screen ] --- --- */
 .index {
 	background-color: #3498db;
 }
@@ -105,11 +108,62 @@ article {
 		 -o-box-shadow: #2980b9 15px 15px 15px; 
 			box-shadow: #2980b9 15px 15px 15px;	
 }
+/* --- --- [ Features section ] --- --- */
 .features {
 	background-color: #2ecc71;
 }
+/* --- --- [ Testimonials section ] --- --- */
 .testimonials {
 	background-color: #7f8c8d;
+}
+/* --- --- [ Content Box ] --- --- */
+.box {
+	margin: 5% 0;
+}
+.box > .boximages {
+	width: 30%;
+}
+.box > .boximages img {
+	width: 99%;
+	height: auto;
+	border:2px solid #fff;
+	-webkit-border-radius: 50%;
+	   -moz-border-radius: 50%;
+		-ms-border-radius: 50%;
+		 -o-border-radius: 50%;
+			border-radius: 50%;
+	-webkit-box-shadow: #666 15px 15px 15px;
+	   -moz-box-shadow: #666 15px 15px 15px;
+		-ms-box-shadow: #666 15px 15px 15px;
+		 -o-box-shadow: #666 15px 15px 15px; 
+			box-shadow: #666 15px 15px 15px;
+}
+.box > .boximages > .icon-responsive, .box > .boximages > .icon-custom {
+	font-size: 1500%;
+	margin-top: 15%;
+	color: #fff;
+	text-shadow: 20px 20px 20px #27ae60;
+}
+.box:nth-child(odd) > .boximages {
+	float: right;
+	margin-left: 3%;
+}
+.box:nth-child(even) > .boximages {
+	float: left;
+	margin-right: 3%;
+}
+.box > .boxcontent {
+	width: 67%;
+}
+.box:nth-child(odd) > .boxcontent {
+	float: left;
+}
+.box:nth-child(even) > .boxcontent {
+	float: right;
+}
+.box > .boxcontent h2 {
+	margin-bottom: 5%;
+	text-align: left;
 }
 /* --- --- [ Social Networks ] --- --- */
 .social {
@@ -239,6 +293,44 @@ article {
 	font-size: 1500%;
 	color: #fff;
 	text-shadow: 15px 15px 15px #d35400;
+	position: absolute;
+	-webkit-animation:mapicon 2s ease-in-out infinite;
+	   -moz-animation:mapicon 2s linear infinite;
+	    -ms-animation:mapicon 2s linear infinite;
+	     -o-animation:mapicon 2s linear infinite;
+			animation:mapicon 2s linear infinite;
+}
+@-moz-keyframes mapicon { 
+	50% { 
+		-moz-transform: rotate(35deg); 
+	}
+	100% { 
+		-webkit-transform: rotate(0deg); 
+	} 
+}
+@-webkit-keyframes mapicon { 
+	50% { 
+		-webkit-transform: rotate(35deg); 
+	}
+	100% { 
+		-webkit-transform: rotate(0deg); 
+	} 
+}
+@-o-keyframes mapicon { 
+	50% { 
+		-o-transform: rotate(35deg); 
+	}
+	100% { 
+		-o-transform: rotate(0deg); 
+	} 
+}
+@keyframes mapicon { 
+	50% { 
+		transform: rotate(0deg); 
+	} 
+	100% { 
+		transform:rotate(35deg); 
+	} 
 }
 .contact address > ul {
 	margin: 3% 0;
@@ -257,54 +349,4 @@ article {
 } 
 .contact #map-stereoclub {
 	height: 100%;
-}
-
-/* --- --- [ Content Box ] --- --- */
-.box {
-	margin: 5% 0;
-}
-.box > .boximages {
-	width: 30%;
-}
-.box > .boximages img {
-	width: 99%;
-	height: auto;
-	border:2px solid #fff;
-	-webkit-border-radius: 50%;
-	   -moz-border-radius: 50%;
-		-ms-border-radius: 50%;
-		 -o-border-radius: 50%;
-			border-radius: 50%;
-	-webkit-box-shadow: #666 15px 15px 15px;
-	   -moz-box-shadow: #666 15px 15px 15px;
-		-ms-box-shadow: #666 15px 15px 15px;
-		 -o-box-shadow: #666 15px 15px 15px; 
-			box-shadow: #666 15px 15px 15px;
-}
-.box > .boximages > .icon-responsive, .box > .boximages > .icon-custom {
-	font-size: 1500%;
-	margin-top: 15%;
-	color: #fff;
-	text-shadow: 20px 20px 20px #27ae60;
-}
-.box:nth-child(odd) > .boximages {
-	float: right;
-	margin-left: 3%;
-}
-.box:nth-child(even) > .boximages {
-	float: left;
-	margin-right: 3%;
-}
-.box > .boxcontent {
-	width: 67%;
-}
-.box:nth-child(odd) > .boxcontent {
-	float: left;
-}
-.box:nth-child(even) > .boxcontent {
-	float: right;
-}
-.box > .boxcontent h2 {
-	margin-bottom: 5%;
-	text-align: left;
 }
