@@ -19,32 +19,10 @@
 	<script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
 	<!-- Google Maps JS -->
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyww0kT3sGjHybCQdvUB1vIOeelhxZtao&sensor=false"></script>
-	<script type="text/javascript">
-	/* Google maps API v3*/
-		function initialize() {
-			var mapOptions = {
-				center: new google.maps.LatLng(45.6007189, -73.5310528),
-				zoom: 15,
-				mapTypeId: google.maps.MapTypeId.ROADMAP
-			};
-			var map = new google.maps.Map(document.getElementById("map-stereoclub"), mapOptions);
-		}
-		google.maps.event.addDomListener(window, 'load', initialize);
-	/* One page scroll options*/
-		$(document).ready(function(){
-			$(".stereoclub").onepage_scroll({
-				sectionContainer: "section",
-				easing: 		  "ease-in-out"
-			});
-		if(navigator.userAgent.toLowerCase().indexOf("firefox") != -1) {
-				$("body").addClass("ff");
-			}
-		});
-	</script>
+	<!-- Our JS file -->
+	<script type="text/javascript" src="js/stereoclub.js"></script>
 	 <!-- Include the HTML5 shiv print polyfill for Internet Explorer browsers 8 and below -->
-	<!--[if lt IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
 	<div class="wrapper">
@@ -56,15 +34,15 @@
 				<article>
 					<h1>StereoClub</h1>
 					<h2>NightClub & Music WordPress Theme</h2>
-					<div class="caption desktop">
+					<div class="caption desktop"><!-- Display only for desktop -->
 						<img title="StereoClub - Desktop version" src="images/desktop.png" alt="StereoClub - Desktop version">
 						<p class="caption-text">StereoClub - Desktop Version</p>
 					</div>
-					<div class="caption tablet">
+					<div class="caption tablet"><!-- Display only for tablets -->
 						<img title="StereoClub - Tablet version" src="images/tablet.png" alt="StereoClub - Tablet version">
 						<p class="caption-text">StereoClub - Tablet Version</p>
 					</div>
-					<div class="caption mobile">
+					<div class="caption mobile"><!-- Display only for smartphones -->
 						<img title="StereoClub - Mobile version" src="images/telephone.png" alt="StereoClub - Mobile version">
 						<p class="caption-text">StereoClub - Mobile Version</p>
 					</div>										
@@ -136,7 +114,7 @@
 					<h1>StereoClub make your life easier</h1>
 					
 					<p>We build more than just Themes. We build User Experience for both, you and your visitors. Our Themes are great to look at, set up in minutes and easy to modify. Using them doesn’t feel like work anymore.</p>
-					
+					<!-- Demo and Buy buttons -->
 					<div class="doublebuttons">
 						<a href="#demo" class="doublebutton doublebuttondemo"><i class="icon-demo"></i>View Demo</a>
 						<a href="#buy" class="doublebutton doublebuttonbuy"><i class="icon-buy"></i>55$  - Buy Now</a>
@@ -149,20 +127,20 @@
 			<section class="social">
 				<article>
 					<h1>Stay Connected with Us on Social Media</h1>
-
-					<div class="fb">
+					<!--  Social Media Icons -->
+					<div class="fb"><!-- Facebook -->
 						<a href="http://fb.com/valeriu" title="Join us on Facebook"><span class="icon-facebook"></span></a>
 						<div><span>Join us on Facebook</span></div>
 					</div>
-					<div class="tw">
+					<div class="tw"><!-- Twiter -->
 						<a href="http://twitter.com/valeriu" title="Follow us on Twitter"><span class="icon-twitter"></span></a>
 						<div><span>Follow us on Twitter</span></div>
 					</div>
-					<div class="gp">
+					<div class="gp"><!-- Google Plus -->
 						<a href="https://google.com/+ValeriuTihai" title="Join us on Google+"><span class="icon-google-plus"></span></a>
 						<div><span>Join us on Google+</span></div>
 					</div>
-					<div class="rss">
+					<div class="rss"> <!-- RSS news -->
 						<a href="http://feeds.feedburner.com/valeriutihai" title="Subscribe by RSS"><span class="icon-feed"></span></a>
 						<div><span>Subscribe by RSS</span></div>
 					</div>
@@ -173,14 +151,14 @@
 				<article>
 					<h1>Contact us</h1>
 					<address>
-							<ul>
-								<li>2030, boulevard Pie-IX</li>
-								<li>Bureau 430</li>
-								<li>Montréal, Québec</li>
-								<li>H1V 2C8, Canada</li>
-								<li>Tél.: 514.254.7131, poste 4800</li>
-								<li>Email: <a href="mailto:info@stereoclub.qc.ca" title="Our Email address">info@stereoclub.qc.ca</a></li>
-								<li>Site web: <a href="http://stereoclub.qc.ca" target="_blank" title="Our Website">www.stereoclub.qc.ca</a></li>
+							<ul class="h-adr"><!-- Microformats - h-adr is a simple, open format for publishing structured locations such as addresses, physical and/or postal. h-adr is one of several open microformat draft standards suitable for embedding data in HTML/HTML5 on the web.-->
+								<li class="p-street-address">2030, boulevard Pie-IX</li>
+								<li class="p-extended-address">Bureau 430</li>
+								<li class="p-locality">Montréal, Québec</li>
+								<li><span class="p-postal-code">H1V 2C8</span>, <span class="p-country-name">Canada</span></li>
+								<li class="p-tel">Tél.: 514.254.7131, poste 4800</li>
+								<li class="u-email">Email: <a href="mailto:info@stereoclub.qc.ca" title="Our Email address">info@stereoclub.qc.ca</a></li>
+								<li class="u-url">Site web: <a href="http://stereoclub.qc.ca" target="_blank" title="Our Website">www.stereoclub.qc.ca</a></li>
 							</ul>						
 					</address>
 					<div class="map">
@@ -188,7 +166,7 @@
 					</div>
 					<div class="clear"></div>
 				</article>
-				<!-- Load google maps content-->
+				<!-- Load google maps content (API v.3)-->
 				<div id="map-stereoclub"/></div>
 			</section>
 		</main> <!-- / End Main -->
@@ -211,4 +189,5 @@
 		* DJ Boy - http://st.gdefon.com/wallpapers_original/wallpapers/435969_night-club_dj_black-man_di-dzhej_klub_nochnoj_4288x2848_(www.GdeFon.ru).jpg
 		* Google Maps API - https://code.google.com/apis/console/
 		* IcoMoon custom icon font builder - http://icomoon.io/
+		* Microformats - http://microformats.org/wiki/h-adr
 -->
