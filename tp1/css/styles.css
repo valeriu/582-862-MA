@@ -40,11 +40,7 @@ body {
 	height: 100%;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
-@-moz-document url-prefix() {
-	body {
-		font-size: 70%;
-    }
-}
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 100;
@@ -58,8 +54,15 @@ h1 {
 	font-size: 400%;
 	margin-top: 1%;
 }
+.ff h1 {
+	font-size: 350%;
+	margin-top: 1%;
+}
 h2 {
 	font-size: 350%;
+}
+.ff h2 {
+	font-size: 300%;
 }
 h3 {
 	font-size: 300%;
@@ -70,6 +73,10 @@ p {
 	line-height: 170%;
 	font-weight: 100;
 	color: #fff;
+}
+.ff p {
+	font-size: 125%;
+	line-height: 135%;
 }
 .wrapper {
 	height: 100% !important; /* for IE*/
@@ -102,6 +109,7 @@ article {
 .index .caption img {
 	max-width: 100%;
 	height: auto;
+	margin-top: 1.5%;
 	-webkit-border-radius: 3.19%;
 	   -moz-border-radius: 3.19%;
 		-ms-border-radius: 3.19%;
@@ -112,6 +120,9 @@ article {
 		-ms-box-shadow: #2980b9 15px 15px 15px;
 		 -o-box-shadow: #2980b9 15px 15px 15px; 
 			box-shadow: #2980b9 15px 15px 15px;	
+}
+.ff .index .caption img {
+	max-width: 80%;
 }
 /* --- --- [ Features section ] --- --- */
 .features {
@@ -244,7 +255,6 @@ article {
 }
 .features .responsive:hover > .boximages > .icon-mobile {
 	display: block;
-
 }
 /* --- --- [ Testimonials section ] --- --- */
 .testimonials {
@@ -256,6 +266,9 @@ article {
 }
 .box > .boximages {
 	width: 30%;
+}
+.ff .box > .boximages img {
+	width: 79%;
 }
 .box > .boximages img {
 	width: 99%;
@@ -355,13 +368,15 @@ article {
 		opacity: 1
 	}
 }
-.box > .boximages > .icon-laptop, .box > .boximages > .icon-mobile, .box > .boximages > .icon-custom {
+.icon-laptop, .icon-mobile, .icon-custom  {
 	font-size: 1500%;
 	margin-top: 15%;
 	color: #fff;
 	text-shadow: 0px 20px 20px #27ae60;
 }
-
+.ff .icon-laptop, .ff .icon-mobile, .ff .icon-custom {
+	font-size: 1300%;
+}
 
 .box:nth-child(odd) > .boximages {
 	float: right;
@@ -404,6 +419,9 @@ article {
 	font-size: 1500%;
 	color: #fff;
 	text-shadow: 20px 20px 20px #8e44ad;
+}
+.ff .icon-facebook, .ff .icon-google-plus, .ff .icon-twitter, .ff .icon-feed {
+	font-size: 1300%;
 }
 .icon-facebook:hover, .icon-google-plus:hover, .icon-twitter:hover, .icon-feed:hover {
 	-webkit-transition: all 0.4s ease-in-out;
@@ -500,13 +518,13 @@ article {
 	background-color: #e67e22;
 }
 .contact .map, .contact address {
-	width: 60%;
+	width: 65%;
 	float: left;
 }
 .contact .map {
 	padding:3% 0 0 0%;
 	float: left;
-	width: 40%;
+	width: 35%;
 }
 .contact .icon-map {
 	font-size: 1500%;
@@ -518,6 +536,9 @@ article {
 	    -ms-animation:mapicon 2s ease-in-out infinite;
 	     -o-animation:mapicon 2s ease-in-out infinite;
 			animation:mapicon 2s ease-in-out infinite;
+}
+.ff .contact .icon-map {
+	font-size: 1300%;
 }
 @-moz-keyframes mapicon { 
 	50% { 
@@ -545,10 +566,10 @@ article {
 }
 @keyframes mapicon { 
 	50% { 
-		transform: rotate(0deg); 
+		transform: rotate(35deg); 
 	} 
 	100% { 
-		transform:rotate(35deg); 
+		transform:rotate(0deg); 
 	} 
 }
 .contact address > ul {
@@ -570,3 +591,171 @@ article {
 	height: 100%;
 	z-index: 10;
 }
+.tablet, .mobile {
+	display:none;
+}
+/* --- --- [ Media Query ] --- --- */
+ 
+/* Smaller than standard 1024 (devices and browsers) */
+@media only screen and (max-width: 1024px) {
+	h1 {
+		font-size: 350%;
+		margin-top: 1%;
+	}
+	.ff h1 {
+		font-size: 300%;
+		margin-top: 1%;
+	}
+	h2 {
+		font-size: 300%;
+	}
+	.ff h2 {
+		font-size: 250%;
+	}
+	p {
+		font-size: 135%;
+		line-height: 150%;
+	}
+	.ff p {
+		font-size: 115%;
+		line-height: 125%;
+	}
+	.icon-laptop, .icon-mobile, .icon-custom, .icon-facebook, .icon-google-plus, .icon-twitter, .icon-feed  {
+		font-size: 1250%;
+	}
+	.ff .icon-laptop, .ff .icon-mobile, .ff .icon-custom, .ff .icon-facebook, .ff .icon-google-plus, .ff .icon-twitter, .ff .icon-feed {
+		font-size: 1100%;
+	}
+	.ff .index .caption img {
+		max-width: 100%;
+	}
+	.testimonials .box { 
+		margin: 10% 0;
+	}
+	.ff .testimonials .box > .boximages img {
+		margin-top: 10%;
+	}
+	.ff .testimonials .box > .boxcontent h2 {
+		font-size: 200%;
+	}
+	.contact address > ul > li {
+		font-size: 135%;
+		line-height: 140%;
+	}
+
+}
+
+/* Tablet Portrait size to standard 800 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 800px) {
+	article {
+	width: 90%;
+	}
+	.desktop {
+		display: none;
+	}
+	.tablet {
+		display: block;
+	}
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+	.desktop {
+		display: none;
+	}
+	.tablet {
+		display: block;
+	}
+	/* --- --- [ Demo Buy buttons ] --- --- */
+	.demobuy .doublebutton {
+		letter-spacing: 0px;
+		padding: 1% 2%;
+		font-size: 109%;
+	}
+	.demobuy .doublebuttondemo, .demobuy .doublebuttonbuy {
+		margin:5px 0;
+	}
+	.demobuy .doublebuttondemo, .demobuy .doublebuttonbuy {
+		border-radius: 100px;
+	}
+	.demobuy .icon-buy, .demobuy .icon-demo {
+		font-size: 100%;
+		display: block;
+		margin: 0 0.21%;
+	}
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 120px) and (max-width: 550px) {
+	.desktop, .tablet {
+		display: none;
+	}
+	.mobile {
+		display: block;
+	}
+	h1 {
+		font-size: 150%;
+		margin-top: 1%;
+	}
+	.ff h1 {
+		font-size: 130%;
+		margin-top: 1%;
+	}
+	h2 {
+		font-size: 150%;
+	}
+	.ff h2 {
+		font-size: 100%;
+	}
+	p {
+		font-size: 105%;
+		line-height: 150%;
+	}
+	.ff p {
+		font-size: 95%;
+		line-height: 125%;
+	}
+	.testimonials .box > .boximages {
+		display: none;
+	}
+	.ff .testimonials .box > .boxcontent h2 {
+		font-size: 100%;
+	}
+	.index .caption img {
+		max-width: 70%;
+	}
+	.ff .index .caption img {
+		max-width: 60%;
+	}
+	.icon-laptop, .icon-mobile, .icon-custom {
+		display: none;
+	}
+	.features .boximages {
+		display: none;
+	}
+	.box > .boxcontent {
+		width: 100%;
+	}
+	.contact .map {
+		display: none;
+	}
+	.contact address, .contact address > ul {
+		width: 100%;
+	}
+	.contact address > ul > li {
+		font-size: 100%;
+		line-height: 120%;
+	}
+	.icon-facebook, .icon-google-plus, .icon-twitter, .icon-feed  {
+		font-size: 700%;
+	}
+	.ff .icon-facebook, .ff .icon-google-plus, .ff .icon-twitter, .ff .icon-feed  {
+		font-size: 600%;
+	}
+
+}
+@media only screen and (max-width: 320px) {
+
+	
+}
+

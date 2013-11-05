@@ -20,6 +20,7 @@
 	<!-- Google Maps JS -->
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyww0kT3sGjHybCQdvUB1vIOeelhxZtao&sensor=false"></script>
 	<script type="text/javascript">
+	/* Google maps API v3*/
 		function initialize() {
 			var mapOptions = {
 				center: new google.maps.LatLng(45.6007189, -73.5310528),
@@ -29,14 +30,15 @@
 			var map = new google.maps.Map(document.getElementById("map-stereoclub"), mapOptions);
 		}
 		google.maps.event.addDomListener(window, 'load', initialize);
-	</script>
-	<!-- One page scroll options-->
-	<script>
+	/* One page scroll options*/
 		$(document).ready(function(){
 			$(".stereoclub").onepage_scroll({
 				sectionContainer: "section",
 				easing: 		  "ease-in-out"
 			});
+		if(navigator.userAgent.toLowerCase().indexOf("firefox") != -1) {
+				$("body").addClass("ff");
+			}
 		});
 	</script>
 	 <!-- Include the HTML5 shiv print polyfill for Internet Explorer browsers 8 and below -->
@@ -58,6 +60,14 @@
 						<img title="StereoClub - Desktop version" src="images/desktop.png" alt="StereoClub - Desktop version">
 						<p class="caption-text">StereoClub - Desktop Version</p>
 					</div>
+					<div class="caption tablet">
+						<img title="StereoClub - Tablet version" src="images/tablet.png" alt="StereoClub - Tablet version">
+						<p class="caption-text">StereoClub - Tablet Version</p>
+					</div>
+					<div class="caption mobile">
+						<img title="StereoClub - Mobile version" src="images/telephone.png" alt="StereoClub - Mobile version">
+						<p class="caption-text">StereoClub - Mobile Version</p>
+					</div>										
 				</article>
 			</section>
 			<!-- Features Section -->
