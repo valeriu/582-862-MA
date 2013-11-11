@@ -43,33 +43,33 @@ Professor : Jonathan Martel
 <form action="" id="myform">
 	<fieldset>
 		<legend>Éléments du formulaire</legend><!-- Form Title -->
-		
+		<!--Nom -->
 		<label for="nom">Nom</label>
 		<input type="text" class="topcoat-text-input--large" name="nom" id="nom" required pattern="^([a-zäâàèéêëïîôöüûùçA-ZÄÂÀÈÉÊËÏÎÔÖÜÛÙÇ]+[ \-'\.]?[a-zäâàèéêëïîôöüûùçA-ZÄÂÀÈÉÊËÏÎÔÖÜÛÙÇ\.]+){1,}$" placeholder="Votre Nom">
-
+		<!-- Prenom -->
 		<label for="prenom">Prénom</label>
 		<input type="text" class="topcoat-text-input--large" name="prenom" id="prenom" required pattern="^([a-zäâàèéêëïîôöüûùçA-ZÄÂÀÈÉÊËÏÎÔÖÜÛÙÇ]+[ \-'\.]?[a-zäâàèéêëïîôöüûùçA-ZÄÂÀÈÉÊËÏÎÔÖÜÛÙÇ\.]+){1,}$" placeholder="Votre Prenom">
-
+		<!-- Email -->
 		<label for="courriel">Courriel</label>
 		<!-- http://en.wikipedia.org/wiki/Email_address#Examples -->
 		<input type="email" class="topcoat-text-input--large" name="courriel" id="courriel" required pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,7}$" placeholder="Votre Courriel">
-
+		<!-- Site URL -->
 		<label for="url">Site web</label>
 		<input type="url" class="topcoat-text-input--large" name="url" id="url" required pattern="^http\://[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,6}(/\S*)?$" placeholder="Votre website URL">
-
+		<!-- Telephone -->
 		<label for="telephone">Téléphone</label>
 		<input type="tel" class="topcoat-text-input--large" name="telephone" id="telephone" required pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="Format: xxx-xxx-xxxx">
-
+		<!-- Numero de rue -->
 		<label for="nrrue">Numéro de rue</label>
 		<input type="text" class="topcoat-text-input--large" name="nrrue" id="nrrue" required pattern="\d{1,4}" placeholder="Votre Numéro de rue">
-
+		<!-- Nom Rue -->
 		<label for="rue">Rue</label>
 		<!-- http://en.wikipedia.org/wiki/List_of_cities_in_Canada // http://en.wikipedia.org/wiki/List_of_cities_in_Canada-->
 		<input type="text" class="topcoat-text-input--large" name="rue" id="rue" required pattern="^[a-zäâàèéêëïîôöüûùçA-ZÄÂÀÈÉÊËÏÎÔÖÜÛÙÇ0-9]+([ ,\.'-]?[a-z \.äâàèéêëïîôöüûùçA-ZÄÂÀÈÉÊËÏÎÔÖÜÛÙÇ)(0-9]+){1,}$"  placeholder="Votre rue">
-
+		<!-- Nom Ville -->
 		<label for="ville">Ville</label>
 		<input type="text" class="topcoat-text-input--large" name="ville" id="ville" required pattern="^[a-zäâàèéêëïîôöüûùçA-ZÄÂÀÈÉÊËÏÎÔÖÜÛÙÇ0185]+([ ,.'-]?[a-z .äâàèéêëïîôöüûùçA-ZÄÂÀÈÉÊËÏÎÔÖÜÛÙÇ1]+){1,}$"  placeholder="Votre Ville">
-
+		<!-- Touts les provinces -->
 		<label for="province">Province</label>
 		<select id="province" name="province" class="topcoat-text-input--large">
 			<option value="">Sélectionner une Province</option>
@@ -87,7 +87,7 @@ Professor : Jonathan Martel
 			<option value="NU">Nunavut</option>
 			<option value="YT">Yukon</option>
 		</select>
-		
+		<!-- Sexe -->
 		<label for="sexe">Sexe</label>
 		<label class="topcoat-radio-button">
 			<input type="radio" name="sexe">
@@ -104,10 +104,10 @@ Professor : Jonathan Martel
 			<div class="topcoat-radio-button__checkmark"></div>
 			Autre
 		</label><br />
-
+		<!-- Date -->
 		<label for="date">Date de naissance</label>
 		<input type="date" class="topcoat-text-input--large" name="date" id="date">
-
+		<!-- Compétences techniques, range avec JavaScript -->
 		<label for="competences"><strong>Compétences techniques</strong></label>
 		<div class="fCompetences">
 			<label for="js">JavaScript</label><span class="jsvalue">3</span>
@@ -122,10 +122,10 @@ Professor : Jonathan Martel
 			<label for="design">Design</label><span class="designvalue">3</span>
 			<input type="range" name="design" class="topcoat-range" id="design" min="1" max="5" step="1" required>
 		</div>
-
+		<!-- Input Color -->
 		<label for="color">Couleur de votre texte</label>
 		<input type="color" name="color" id="color" required>
-		
+		<!-- Bouton Envoi -->
 		<p>Merci de remplir le formulaire</p>
 		<input type="submit" class="topcoat-button--large--cta" value="Envoi">
 	</fieldset>
