@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercice 7 : Formulaire avec Topcoat</title>
+	<!-- Include the Topcoat stylesheet -->
+	<link rel="stylesheet" href="topcoat/css/topcoat-desktop-light.css">
+	<!-- Include the site stylesheet -->
+	<link rel="stylesheet" href="css/styles.css">
+	<!-- JavaScript validation -->
+	<script>
+		window.addEventListener("load", loadEvents, false);
+
+		function loadEvents() {
+			var eljs 	= document.getElementById("js");
+			var elhtml 	= document.getElementById("htmlcss");
+			var elphp 	= document.getElementById("php");
+			var eldes 	= document.getElementById("design");
+
+			eljs.addEventListener("change", addRangeValue, false);
+			elhtml.addEventListener("change", addRangeValue, false);
+			elphp.addEventListener("change", addRangeValue, false);
+			eldes.addEventListener("change", addRangeValue, false);
+		}
+
+		function addRangeValue(el) {
+			console.log(el.target.previousElementSibling);
+			el.target.previousElementSibling.innerHTML = el.target.value;
+		}
+	</script>
+</head>
+<body>
+<!-- Star form elements -->
+<form action="" id="myform">
+	<fieldset>
+		<legend>Éléments du formulaire</legend><!-- Form Title -->
+		
+		<label for="nom">Nom</label>
+		<input type="text" class="topcoat-text-input--large" name="nom" id="nom" required pattern="^([a-zäâàèéêëïîôöüûùçA-ZÄÂÀÈÉÊËÏÎÔÖÜÛÙÇ]+[ \-'\.]?[a-zäâàèéêëïîôöüûùçA-ZÄÂÀÈÉÊËÏÎÔÖÜÛÙÇ\.]+){1,}$" placeholder="Votre Nom">
+
+		<label for="prenom">Prénom</label>
+		<input type="text" class="topcoat-text-input--large" name="prenom" id="prenom" required pattern="^([a-zäâàèéêëïîôöüûùçA-ZÄÂÀÈÉÊËÏÎÔÖÜÛÙÇ]+[ \-'\.]?[a-zäâàèéêëïîôöüûùçA-ZÄÂÀÈÉÊËÏÎÔÖÜÛÙÇ\.]+){1,}$" placeholder="Votre Prenom">
+
+		<label for="courriel">Courriel</label>
+		<!-- http://en.wikipedia.org/wiki/Email_address#Examples -->
+		<input type="email" class="topcoat-text-input--large" name="courriel" id="courriel" required pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,7}$" placeholder="Votre Courriel">
+
+		<label for="url">Site web</label>
+		<input type="url" class="topcoat-text-input--large" name="url" id="url" required pattern="^http\://[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,6}(/\S*)?$" placeholder="Votre website URL">
+
+		<label for="telephone">Téléphone</label>
+		<input type="tel" class="topcoat-text-input--large" name="telephone" id="telephone" required pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="Format: xxx-xxx-xxxx">
+
+		<label for="nrrue">Numéro de rue</label>
+		<input type="text" class="topcoat-text-input--large" name="nrrue" id="nrrue" required pattern="\d{1,4}" placeholder="Votre Numéro de rue">
+
+		<label for="rue">Rue</label>
+		<!-- http://en.wikipedia.org/wiki/List_of_cities_in_Canada // http://en.wikipedia.org/wiki/List_of_cities_in_Canada-->
+		<input type="text" class="topcoat-text-input--large" name="rue" id="rue" required pattern="^[a-zäâàèéêëïîôöüûùçA-ZÄÂÀÈÉÊËÏÎÔÖÜÛÙÇ0-9]+([ ,\.'-]?[a-z \.äâàèéêëïîôöüûùçA-ZÄÂÀÈÉÊËÏÎÔÖÜÛÙÇ)(0-9]+){1,}$"  placeholder="Votre rue">
+
+		<label for="ville">Ville</label>
+		<input type="text" class="topcoat-text-input--large" name="ville" id="ville" required pattern="^[a-zäâàèéêëïîôöüûùçA-ZÄÂÀÈÉÊËÏÎÔÖÜÛÙÇ0185]+([ ,.'-]?[a-z .äâàèéêëïîôöüûùçA-ZÄÂÀÈÉÊËÏÎÔÖÜÛÙÇ1]+){1,}$"  placeholder="Votre Ville">
+
+		<label for="province">Province</label>
+		<select id="province" name="province" class="topcoat-text-input--large">
+			<option value="">Sélectionner une Province</option>
+			<option value="AB">Alberta</option>
+			<option value="BC">British Columbia</option>
+			<option value="MB">Manitoba</option>
+			<option value="NB">New Brunswick</option>
+			<option value="NL">Newfoundland and Labrador</option>
+			<option value="NS">Nova Scotia</option>
+			<option value="ON">Ontario</option>
+			<option value="PE">Prince Edward Island</option>
+			<option value="QC">Quebec</option>
+			<option value="SK">Saskatchewan</option>
+			<option value="NT">Northwest Territories</option>
+			<option value="NU">Nunavut</option>
+			<option value="YT">Yukon</option>
+		</select>
+		
+		<label for="sexe">Sexe</label>
+		<label class="topcoat-radio-button">
+			<input type="radio" name="sexe">
+			<div class="topcoat-radio-button__checkmark"></div>
+			Homme
+		</label>
+		<label class="topcoat-radio-button">
+			<input type="radio" name="sexe">
+			<div class="topcoat-radio-button__checkmark"></div>
+			Femme
+		</label>
+		<label class="topcoat-radio-button">
+			<input type="radio" name="sexe">
+			<div class="topcoat-radio-button__checkmark"></div>
+			Autre
+		</label><br />
+
+		<label for="date">Date de naissance</label>
+		<input type="date" class="topcoat-text-input--large" name="date" id="date">
+
+		<label for="competences"><strong>Compétences techniques</strong></label>
+		<div class="fCompetences">
+			<label for="js">JavaScript</label><span class="jsvalue">3</span>
+			<input type="range" name="js"class="topcoat-range"  id="js" min="1" max="5" step="1" required> 
+						
+			<label for="htmlcss">HTML/CSS</label><span class="htmlcssvalue">3</span>
+			<input type="range" name="htmlcss" class="topcoat-range" id="htmlcss" min="1" max="5" step="1" required>
+
+			<label for="php">PHP</label><span class="phpvalue">3</span>
+			<input type="range" name="php" class="topcoat-range" id="php" min="1" max="5" step="1" required>
+
+			<label for="design">Design</label><span class="designvalue">3</span>
+			<input type="range" name="design" class="topcoat-range" id="design" min="1" max="5" step="1" required>
+		</div>
+
+		<label for="color">Couleur de votre texte</label>
+		<input type="color" name="color" id="color" required>
+		
+		<p>Merci de remplir le formulaire</p>
+		<input type="submit" class="topcoat-button--large--cta" value="Envoi">
+	</fieldset>
+</form>	
+</body>
+</html>
+<!-- RIGHT LABEL -->

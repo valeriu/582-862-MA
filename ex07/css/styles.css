@@ -1,0 +1,53 @@
+/*
+Exercice 7 : 	Formulaire avec Topcoat
+Author     :	Valeriu Tihai
+Author URI : 	https://github.com/valeriu/582-862-MA/tree/master/ex07
+Author URI : 	http://valeriu.tihai.md/
+Version    :	0.1
+
+Professor : Jonathan Martel 
+*/
+body, html {
+	margin: 5px;
+}
+#myform {
+	width: 600px;
+	margin: 0 auto;
+}
+#myform fieldset {
+	border: 1px solid #999;
+	-webkit-border-radius: 5px;
+	   -moz-border-radius: 5px;
+		-ms-border-radius: 5px;
+		 -o-border-radius: 5px;
+			border-radius: 5px;
+}
+#myform fieldset legend {
+	font-weight: 700;
+	font-size: 120%;
+}
+#myform label {
+	display: block;
+}
+#myform input, #myform  select  {
+	width: 100%;
+	margin-bottom: 25px;
+}
+#myform .topcoat-radio-button {
+	margin:5px 0;
+}
+#myform .fCompetences label {
+	display: inline;
+	margin-right: 20px;
+}
+#myform input[type="color"]{
+	width: 15%;
+}
+#myform input[type="submit"] {
+	width: auto;
+	cursor: pointer;
+}
+#myform select {
+	line-height: 1.688rem;
+	padding: 3px;
+}
