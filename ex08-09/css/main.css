@@ -32,6 +32,10 @@
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
 	background-color: #0180AD;
 }
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+	color: #fff;
+	background-color: #003873;
+}
 /*Content*/
 .slider, .facebook, .boutonactualites {
 	margin-top: 10px;
@@ -39,6 +43,9 @@
 /*slider*/
 .carousel-indicators {
 	bottom: 0px;
+}
+.slider .item img {
+	width: 100%;
 }
 /*Vous etez*/
 .vetes {
