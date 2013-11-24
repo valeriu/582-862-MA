@@ -1,4 +1,4 @@
-
-$('.carousel').carousel({
-  interval: 4000
+//Carousel options
+$(".carousel").carousel({
+	interval: 4000
 })
