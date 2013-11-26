@@ -17,3 +17,7 @@ $("#inputPHP").change(function(el){
 $("#inputDesign").change(function(el){
 	$( ".designvalue" ).text(el.target.value);
 })
+
+// Tooltip
+
+$('#fristh2').tooltip({ placement: 'left' });
