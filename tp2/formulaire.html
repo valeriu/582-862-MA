@@ -52,6 +52,167 @@
 		<!-- Article  -->
 		<h2>Le formulaire</h2>
 
+		<form class="form-horizontal" role="form">
+		 <!--Nom -->
+		<div class="form-group">
+			<label for="inputNom" class="col-sm-2 control-label">Nom</label>
+			<div class="col-sm-8">
+			  <input type="text" class="form-control" id="inputNom" placeholder="Votre Nom" required pattern="^([a-zäâàèéêëïîôöüûùçA-ZÄÂÀÈÉÊËÏÎÔÖÜÛÙÇ]+[ \-'\.]?[a-zäâàèéêëïîôöüûùçA-ZÄÂÀÈÉÊËÏÎÔÖÜÛÙÇ\.]+){1,}$">
+			</div>
+		</div>
+
+		<!-- Prenom -->
+		<div class="form-group">
+			<label for="inputPreNom" class="col-sm-2 control-label">Prenom</label>
+			<div class="col-sm-8">
+			  <input type="text" class="form-control" id="inputPreNom" placeholder="Votre Prenom" required pattern="^([a-zäâàèéêëïîôöüûùçA-ZÄÂÀÈÉÊËÏÎÔÖÜÛÙÇ]+[ \-'\.]?[a-zäâàèéêëïîôöüûùçA-ZÄÂÀÈÉÊËÏÎÔÖÜÛÙÇ\.]+){1,}$">
+			</div>
+		</div>
+
+		<!-- Email -->
+		<div class="form-group">
+			<label for="inputEmail" class="col-sm-2 control-label">Courriel</label>
+			<div class="col-sm-8">
+			  <!-- http://en.wikipedia.org/wiki/Email_address#Examples -->
+			  <input type="email" class="form-control" id="inputEmail" placeholder="Votre Courriel" required  pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,7}$" >
+			</div>
+		</div>
+
+		<!-- Site URL -->
+		<div class="form-group">
+			<label for="inputUrl" class="col-sm-2 control-label">URL</label>
+			<div class="col-sm-8">
+			  <input type="url" class="form-control" id="inputUrl" required pattern="^http\://[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,6}(/\S*)?$" placeholder="Votre website URL">
+			</div>
+		</div>
+		<!-- Téléphone -->
+		<div class="form-group">
+			<label for="inputTel" class="col-sm-2 control-label">Téléphone</label>
+			<div class="col-sm-8">
+			  <input type="tel" class="form-control" id="inputTel" required pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="Format: xxx-xxx-xxxx">
+			</div>
+		</div>
+
+		<!-- Numero de rue -->
+		<div class="form-group">
+			<label for="inputNrRue" class="col-sm-2 control-label">Numero de rue</label>
+			<div class="col-sm-8">
+			  <input type="text" class="form-control" id="inputNrRue" required pattern="\d{1,4}" placeholder="Votre Numéro de rue">
+			</div>
+		</div>
+
+		<!-- Nom Rue -->
+		<div class="form-group">
+			<label for="inputRue" class="col-sm-2 control-label">Rue</label>
+			<div class="col-sm-8">
+			  <!-- http://en.wikipedia.org/wiki/List_of_cities_in_Canada // http://en.wikipedia.org/wiki/List_of_cities_in_Canada-->
+			  <input type="text" class="form-control" id="inputRue" required pattern="^[a-zäâàèéêëïîôöüûùçA-ZÄÂÀÈÉÊËÏÎÔÖÜÛÙÇ0-9]+([ ,\.'-]?[a-z \.äâàèéêëïîôöüûùçA-ZÄÂÀÈÉÊËÏÎÔÖÜÛÙÇ)(0-9]+){1,}$"  placeholder="Votre rue">
+			</div>
+		</div>
+
+		<!-- Ville -->
+		<div class="form-group">
+			<label for="inputVille" class="col-sm-2 control-label">Ville</label>
+			<div class="col-sm-8">
+			  <input type="text" class="form-control" id="inputVille" required pattern="^[a-zäâàèéêëïîôöüûùçA-ZÄÂÀÈÉÊËÏÎÔÖÜÛÙÇ0185]+([ ,.'-]?[a-z .äâàèéêëïîôöüûùçA-ZÄÂÀÈÉÊËÏÎÔÖÜÛÙÇ1]+){1,}$"  placeholder="Votre Ville">
+			</div>
+		</div>
+
+		<!-- Province -->
+		<div class="form-group">
+			<label for="province" class="col-sm-2 control-label">Province</label>
+			<div class="col-sm-8">
+				<select id="province" name="province"  class="form-control">
+					<option value="">Sélectionner une Province</option>
+					<option value="AB">Alberta</option>
+					<option value="BC">British Columbia</option>
+					<option value="MB">Manitoba</option>
+					<option value="NB">New Brunswick</option>
+					<option value="NL">Newfoundland and Labrador</option>
+					<option value="NS">Nova Scotia</option>
+					<option value="ON">Ontario</option>
+					<option value="PE">Prince Edward Island</option>
+					<option value="QC">Quebec</option>
+					<option value="SK">Saskatchewan</option>
+					<option value="NT">Northwest Territories</option>
+					<option value="NU">Nunavut</option>
+					<option value="YT">Yukon</option>
+				</select>
+			</div>
+		</div>
+		<!-- Sexe -->
+		 <div class="form-group">
+			 <label for="sexe" class="col-sm-2 control-label">Sexe</label>
+			 <div class="col-sm-8">
+				 <label class="radio-inline">
+					<input type="radio" name="sexe" value="option1"> Homme
+				</label>
+				<label class="radio-inline">
+					<input type="radio" name="sexe" value="option2"> Femme
+				</label>
+				<label class="radio-inline">
+					<input type="radio" name="sexe" value="option3"> Autre
+				</label>
+			</div>
+		</div>
+		<!-- Date de naissance -->
+		<div class="form-group">
+			<label for="inputDateNess" class="col-sm-2 control-label">Date de naissance</label>
+			<div class="col-sm-8">
+			  <input type="date" class="form-control" id="inputDateNess">
+			</div>
+		</div>
+
+		<!-- JavaScript -->
+		<div class="form-group">
+			<label for="inputJS" class="col-sm-2 control-label">JavaScript <span class="jsvalue">3</span></label>
+			<div class="col-sm-8">
+			  <input type="range" class="form-control" id="inputJS">
+			</div>
+		</div>
+
+		<!-- HTML/CSS -->
+		<div class="form-group">
+			<label for="inputHTMLCSS" class="col-sm-2 control-label">HTML / CSS <span class="htmlcssvalue">3</span></label>
+			<div class="col-sm-8">
+			  <input type="range" class="form-control" id="inputHTMLCSS">
+			</div>
+		</div>
+
+		<!-- PHP -->
+		<div class="form-group">
+			<label for="inputPHP" class="col-sm-2 control-label">PHP <span class="phpvalue">3</span></label>
+			<div class="col-sm-8">
+			  <input type="range" class="form-control" id="inputPHP">
+			</div>
+		</div>
+
+		<!-- Design -->
+		<div class="form-group">
+			<label for="inputDesign" class="col-sm-2 control-label">Design <span class="designvalue">3</span></label>
+			<div class="col-sm-8">
+			  <input type="range" class="form-control" id="inputDesign">
+			</div>
+		</div>
+
+		 <!-- Input Color -->
+		<div class="form-group">
+			<label for="inputColor" class="col-sm-2 control-label">Color</label>
+			<div class="col-sm-8">
+			  <input type="color" class="form-control" id="inputColor" required >
+			</div>
+		</div>
+
+
+
+
+		  <!-- Submit button -->
+		  <div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+			  <button type="submit" class="btn btn-default">Envoi &raquo;</button>
+			</div>
+		  </div>
+		</form>
 
 	</article>
 
