@@ -4,23 +4,16 @@ $(".carousel").carousel({
 })
 
 // JavaScript validation
-/*
-		window.addEventListener("load", loadEvents, false);
 
-		function loadEvents() {
-			var eljs 	= document.getElementById("js");
-			var elhtml 	= document.getElementById("htmlcss");
-			var elphp 	= document.getElementById("php");
-			var eldes 	= document.getElementById("design");
-
-			eljs.addEventListener("change", addRangeValue, false);
-			elhtml.addEventListener("change", addRangeValue, false);
-			elphp.addEventListener("change", addRangeValue, false);
-			eldes.addEventListener("change", addRangeValue, false);
-		}
-
-		function addRangeValue(el) {
-			//console.log(el.target.previousElementSibling);
-			el.target.previousElementSibling.innerHTML = el.target.value;
-		}
-*/
+$("#inputJS").change(function(el){
+	$( ".jsvalue" ).text(el.target.value);
+})
+$("#inputHTMLCSS").change(function(el){
+	$( ".htmlcssvalue" ).text(el.target.value);
+})
+$("#inputPHP").change(function(el){
+	$( ".phpvalue" ).text(el.target.value);
+})
+$("#inputDesign").change(function(el){
+	$( ".designvalue" ).text(el.target.value);
+})
