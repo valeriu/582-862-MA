@@ -37,13 +37,26 @@ img.imgcenter{
     margin-right: auto
 }
 .slide1 {
-	background: #ef6529;
+	background: #ff8700;
 }
 .slide2 {
 	background-color: #0169ae;
 }
 .slide3 {
 	background-color: #c00;
+}
+/* ==========================================================================
+   Content
+   ========================================================================== */
+article p, article li {
+	font-size: 16px;
+	line-height: 1.5em;
+}
+article p {
+	text-indent: 35px;
+}
+.text-center .img-responsive {
+		display: inline;
 }
 /* ==========================================================================
    Footer
