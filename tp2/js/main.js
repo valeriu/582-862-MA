@@ -21,3 +21,5 @@ $("#inputDesign").change(function(el){
 // Tooltip
 
 $('#fristh2').tooltip({ placement: 'left' });
+$('#wpimg').tooltip({ placement: 'top' });
+$('#typoimg').tooltip({ placement: 'top' });
